@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "serverless-function-execution"
+version = "0.1.0"
+description = "A serverless function execution platform."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    {name = "Varun", email = "varun@example.com"}
+]
+keywords = ["serverless", "fastapi", "streamlit", "docker", "virtualization"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "fastapi==0.95.0",
+    "uvicorn==0.21.1",
+    "pydantic==1.10.7",
+    "sqlalchemy==2.0.9",
+    "psycopg2-binary==2.9.6",
+    "docker==6.0.1",
+    "streamlit==1.20.0",
+    "plotly==5.14.1",
+    "requests==2.31.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/varuns2903/serverless-function-execution"
+Repository = "https://github.com/varuns2903/serverless-function-execution.git"
+"Issue Tracker" = "https://github.com/varuns2903/serverless-function-execution/issues"
+
+[project.scripts]
+serverless-api = "api.main:app"
+serverless-ui = "frontend.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["api", "frontend"]
