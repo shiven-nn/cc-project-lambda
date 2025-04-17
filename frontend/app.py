@@ -5,6 +5,8 @@ import pandas as pd
 import json
 from datetime import datetime
 
+st.set_page_config(page_title="⚡ Serverless Platform", layout="wide")
+
 # ---------- Custom CSS ----------
 st.markdown("""
     <style>
@@ -58,7 +60,7 @@ def api_call(method, endpoint, data=None):
         return None
 
 def main():
-    st.set_page_config(page_title="⚡ Serverless Platform", layout="wide")
+    # st.set_page_config(page_title="⚡ Serverless Platform", layout="wide")
     st.markdown("<h1 style='color:#2c3e50;'>⚡ Serverless Function Execution Platform</h1>", unsafe_allow_html=True)
 
     with st.sidebar:
